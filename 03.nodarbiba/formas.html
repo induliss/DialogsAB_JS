@@ -4,7 +4,7 @@
 
 <h2>HTML Forms</h2>
 
-<form action="/action_page.php" novalidate, autocomplete="on">
+<form action="/action_page.php" autocomplete="off">
   <lebel for="fmane">First name:</lebel><br>
   <input type="text" id="fname" name="fname"><br>
   <label for="lname">Last name:</label><br>
@@ -14,9 +14,9 @@
 </form> 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
-<form action="/action_page.php">
-    <label for="pwd">Parole (neuztracies šo tekstu neviens neredzēs):</label><br>
-    <input type="password" id="pwd" name="pwd"><br>
+<form action="/action_page.php" novalidate autocomplete="on">
+    <label for="email">e-pasts (neuztracies šo tekstu neviens neredzēs):</label><br>
+    <input type="email" id="pwd" name="pwd"><br>
     <input type="submit" value="Nospied mani"><br>
     <input type="reset"><br>
 </form>
