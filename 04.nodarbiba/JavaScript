@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script>
+            console.log("Izruka no head elementa..")
+        </script>
+    </head>
 <body>
+    <script>
+        console.log("Pirmā izruka no body elementa.")
+    </script>
 
 <h2>My First JavaScript</h2>
 
@@ -18,6 +26,8 @@ Click me to display Date and Time.</button>
 <p>(myFunction is stored in "myScript.js")</p>
 
 <script src="js/Scripts.js"></script>
-
+    <script>
+        console.log("Otrā izruka no body elementa.")
+    </script>
 </body>
 </html> 
