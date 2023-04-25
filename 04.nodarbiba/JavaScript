@@ -2,12 +2,12 @@
 <html>
     <head>
         <script>
-            console.log("Izruka no head elementa..")
+            console.log("Izdruka no head elementa..")
         </script>
     </head>
 <body>
     <script>
-        console.log("Pirmā izruka no body elementa.")
+        console.log("Pirmā izdruka no body elementa.")
     </script>
 
 <h2>My First JavaScript</h2>
@@ -27,7 +27,7 @@ Click me to display Date and Time.</button>
 
 <script src="js/Scripts.js"></script>
     <script>
-        console.log("Otrā izruka no body elementa.")
+        console.log("Otrā izdruka no body elementa.")
     </script>
 </body>
 </html> 
