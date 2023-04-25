@@ -4,11 +4,11 @@
 
 <h2>My First JavaScript</h2>
 
+<p id="demo"></p>
+
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
 Click me to display Date and Time.</button>
-
-<p id="demo"></p>
 
 </body>
 </html>
@@ -21,7 +21,7 @@ Click me to display Date and Time.</button>
 <p id="demo">JavaScript can change HTML content.</p>
 
 <button type="button"
-onclick='document.getElementById("demo"); style.fontSize="35px"'>Click Me! </button>
+onclick='document.getElementById("demo"); innerHTML = "Hallo, JavaScript!"; style.fontSize="35px"'>Click Me! </button>
 
 </body>
 </html>
