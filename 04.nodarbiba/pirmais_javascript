@@ -11,8 +11,9 @@ Click me to display Date and Time.</button>
 <p id="demo"></p>
 
 </body>
+</html>
 
-
+<html>
 <body>
 
 <h2>What Can JavaScript Do?</h2>
@@ -23,7 +24,21 @@ Click me to display Date and Time.</button>
 onclick='document.getElementById("demo"); style.fontSize="35px"'>Click Me! </button>
 
 </body>
+</html>
 
+<html>
+<body>
+
+    <h2>What Can JavaScript Do?</h2>
+    
+    <p id="demo">JavaScript can hide HTML elements.</p>
+    
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+    
+</body>
+</html>
+
+<html>
 <body>
 
     <h2>What Can JavaScript Do?</h2>
@@ -34,5 +49,5 @@ onclick='document.getElementById("demo"); style.fontSize="35px"'>Click Me! </but
     
     <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
     
-    </body>
+</body>
 </html>
