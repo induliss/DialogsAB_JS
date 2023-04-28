@@ -2,28 +2,78 @@
 <html>
 
 <body>
+    <p id="demo"></p>
+
 <script>
  // Numbers:
     let length = 16;
     let weight = 7.5;
-    
+    document.getElementById("demo").innerHTML = length +"<br>" + weight;
+</script>
+
+<p id="demo1"></p>
+
+<script>
     // Strings:
     let color = "Yellow";
     let lastName = "Johnson";
-    
-    // Booleans
-    let x = true;
-    let y = false;
-    
-    // Object:
-    const person = {firstName:"John", lastName:"Doe"};
-    
-    // Array object:
-    const cars = ["Saab", "Volvo", "BMW"];
-    
-    // Date object:
-    const date = new Date("2022-03-25");
+    document.getElementById("demo1").innerHTML = color + "<br>" + lastName;
 </script>
+
+<p id="demo2"></p>
+
+<script>
+    // Booleans
+    let x = 5;
+    let y = 5;
+    let z = 6;
+    document.getElementById("demo2").innerHTML = (x == y) + "<br>" + (x == z);
+</script>
+
+<p id="demo3"></p>
+
+<script>
+    // Object:
+       const person = "Indulis";
+    document.getElementById("demo3").innerHTML = person;
+</script>
+
+<p id="demo4"></p>
+
+<script>
+    // Array object:
+       const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("demo4").innerHTML = cars;
+</script>
+
+<p id="demo5"></p>
+
+<script>
+    // Date object:
+    const date = new Date("2023-04-28");
+    document.getElementById("demo5").innerHTML = date;
+</script>
+
+<p id="matrica"></p>
+<script>
+var x1 = 1,
+  x2 = 2,
+  x3 = 3;
+var delta_x1 = x2 - x1;
+var delta_x2 = x3 - x2;
+var x_coord = [11, 22, 306];
+console.log(x_coord[0]);
+console.log(x_coord[1]);
+console.log(x_coord[2]);
+var coord = [
+  [11, 22, 306],
+  [89, 96, 11],
+];
+console.log(coord[0]);
+console.log(coord[1][1]);
+document.getElementById("matrica").innerHTML = coord[1][1];
+</script>
+
    
 </body>
 </html>
