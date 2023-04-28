@@ -9,7 +9,7 @@ console.log(x_coord[1]);
 console.log(x_coord[2]);
 var coord = [
   [11, 22, 306],
-  [89, 96, 45],
+  [89, 96, 11],
 ];
 console.log(coord[0]);
-console.log(coord[0][0]);
+console.log(coord[1][2]);
