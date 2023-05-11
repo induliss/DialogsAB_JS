@@ -1,10 +1,11 @@
-<script>
-const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+let text = ""
+let i = 0;
 
-let txt = "";
-for (let x in numbers) {
-  txt += numbers[x] + "<br>"; 
+do {
+  text += "<br>" + i;
+  i++;
 }
+while (i < 16);  
 
-document.getElementById("demo").innerHTML = txt;
-</script>
+document.getElementById("demo").innerHTML = text;
+
