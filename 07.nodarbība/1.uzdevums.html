@@ -8,10 +8,13 @@
 
 <script>
 let text = "";
-let i = 0;
-while (i < 10) {
+let i = 2;
+while (i <= 20) {
+  console.log("i:"+i)
+  if (i % 2 == 0)
   text += "<br>" + i;
-  i++;
+ 
+   i+2;
 }
 document.getElementById("demo").innerHTML = text;
 </script>
