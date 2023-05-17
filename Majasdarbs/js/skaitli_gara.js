@@ -1,21 +1,21 @@
 let myNumber = 0;
-document.getElementById("demo_0").innerHTML =
+document.getElementById("demo_0").innerHTML = 0 + 0 + 0 +
 myNumber.toString(2);
-document.getElementById("demo_1").innerHTML =
+document.getElementById("demo_1").innerHTML = 0 + 
 myNumber.toString(8);
-document.getElementById("demo_2").innerHTML =
+document.getElementById("demo_2").innerHTML = 0 + 
 myNumber.toString(10);
-document.getElementById("demo_3").innerHTML =
+document.getElementById("demo_3").innerHTML = 0 +
 myNumber.toString(16);
 
 let myNumber1 = 1;
-document.getElementById("demo_4").innerHTML =
+document.getElementById("demo_4").innerHTML = 0 + 0 + 0 +
 myNumber1.toString(2);
-document.getElementById("demo_5").innerHTML =
+document.getElementById("demo_5").innerHTML = 0 + 
 myNumber1.toString(8);
-document.getElementById("demo_6").innerHTML =
+document.getElementById("demo_6").innerHTML = 0 + 
 myNumber1.toString(10);
-document.getElementById("demo_7").innerHTML =
+document.getElementById("demo_7").innerHTML = 0 + 
 myNumber1.toString(16);
 
 let myNumber2 = 2;
