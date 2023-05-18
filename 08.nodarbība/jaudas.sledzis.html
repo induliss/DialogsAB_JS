@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Jaudas slēdzis.</h2>
+
+<p>Jaudas slēdzis atslēdz īsslēgumus.</p>
+
+<h3> Jaudas slēdža parametri.</h3>
+
+<p id="demo"></p>
+
+<script>
+    const ABB = {
+        param: {
+        nomSpriegums: 10,
+        nomStrava: 630,
+        atslStrava: 20,
+        kritStrava: 50
+      }
+    }
+
+document.getElementById("demo").innerHTML =
+"Nominālais spriegums, kV" + " " + ABB.param.nomSpriegums + "<br>" + "Nominālā strāva, A" + " " + ABB.param.nomStrava;
+</script>
+
+</body>
+</html>
