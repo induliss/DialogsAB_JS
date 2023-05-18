@@ -13,6 +13,19 @@ const person = {
       return this.firstName + " " + this.lastName;
     }
 }
+document.getElementById("demo_oop").innerHTML = "persona " + person.fullName() + "<br>" + "personas id " + person.id;
+
+
+const person1 = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    today: new Date(),
+}
+const myArray = Object.values(person1);
+let myString = JSON.stringify(person1);
+document.getElementById("demo_oop1").innerHTML = myArray;
+document.getElementById("demo_oop2").innerHTML = myString;
 
 var discrete_variable_new = discrete_variable;
 const arrey_example_new = array_example;
