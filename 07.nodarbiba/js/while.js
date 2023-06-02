@@ -12,7 +12,7 @@ document.getElementById("demo_while").innerHTML = text;*/
 
 text = "";
 i = 1;
-while (i <= 200) {
+while (i <= 100) {
   if (i < 10) {
     text += "<br>" + 0 + 0 + i;
   } else if (i < 100) {

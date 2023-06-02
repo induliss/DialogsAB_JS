@@ -13,5 +13,5 @@ function counter(paragraph_name, end_value, step_value){
     document.getElementById(paragraph_name).innerHTML = text;
 }
 
-counter("demo_function_1",toString(2))
+counter("demo_function_1",40,4)
 counter("demo_function_2",50,5)
