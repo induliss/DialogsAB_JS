@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #dd001a;
+  background-image: url('https://www.retv.lv/media/291699/viesi_freepik.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@ body {
 
 h1 {
   font-size: 45px;
-  color: #fff;
+  color: #ef451f;
 }
 
 canvas {
