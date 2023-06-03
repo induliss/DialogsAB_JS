@@ -21,10 +21,12 @@ const height = window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
 
-let lang = prompt('What is your favorite programming language?');
+let ageStr = prompt('How old are you?');
+let age = Number(ageStr);
 
-let feedback = lang.toLowerCase() === 'javascript' ? `It's great!` :
-    `It's ${lang}`;
+let feedback = age >= 16 ?
+    'You are eligible to join.' :
+    'You must be at least 16 year old to join.';
 
 alert(feedback);
 
