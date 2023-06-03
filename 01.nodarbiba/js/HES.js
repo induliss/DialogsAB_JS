@@ -1,4 +1,4 @@
-let intervalID;
+let intervalID_1;
  
     function toggleColor() {
       let e = document.getElementById('flashtext1');
@@ -6,9 +6,9 @@ let intervalID;
     }
 
     function stop() {
-      clearInterval(intervalID);
+      clearInterval(intervalID_1);
     }
 
     function start() {
-       intervalID = setInterval(toggleColor, 500); 
+       intervalID_1 = setInterval(toggleColor, 5000); 
     }
