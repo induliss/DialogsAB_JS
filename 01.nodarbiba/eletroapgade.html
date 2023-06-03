@@ -10,8 +10,7 @@
 <h1>Elektroapgāde</h1>
 <!--<p>Bez elektrības mēs pašalik nevaram --> Tā ir ļoti svarīga tautsaimniecībā.</p>
 
-<img src="C:\Users\Lietotajs\Documents\Programmesanas_kursi\Atteli\elektrolinija.jpg" alt="Trulli" width="500" height="333">
-
+<img src="https://www.tukums.lv/sites/tukums/files/styles/100_style/public/article/Empower_projekts.jpg?itok=ViNJyjjN" alt="ladejas" style="width:150px;height:100px;">
 <style>
 table {
   font-family: arial, sans-serif;
@@ -34,9 +33,9 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>Valsts</th>
-    <th>HES</th>
-    <th>Jauda, MW</th>
+    <th><p id="flashtext">Valsts</p><script src="js/valsts.js"></script></th>
+    <th><p id="flashtext1">HES</p><script src="js/HES.js"></script></th>
+    <th><p id="flashtext2">Jauda, MW</p><script src="js/Jauda.js"></script></th>
   </tr>
   <tr>
     <td>Kina</td>
@@ -74,6 +73,7 @@ tr:nth-child(even) {
     <td>868</td>
   </tr>
 </table>
-
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
 </body>
 </html>
