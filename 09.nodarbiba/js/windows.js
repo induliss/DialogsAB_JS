@@ -49,6 +49,43 @@ let message = result ? 'You clicked the OK button' :
 
 alert(message);
 
-setTimeout(() => {
-    jsWindow.close();
-}, 5000);
+let intervalID;
+
+function toggleColor() {
+  let e = document.getElementById("flashtext");
+  console.log(e);
+  console.log(e.style);
+  console.log(e.style.color);
+  console.log(e.style.color == "red");
+  console.log(e.style.color == "red" ? "blue" : "red");
+  e.style.color = e.style.color == "red" ? "blue" : "red";
+  console.log(e.style.color);
+  console.log("\n");
+}
+
+function stop() {
+    clearInterval(intervalID);
+  }
+  
+  function start() {
+    intervalID = setInterval(toggleColor, 1000);
+  }
+
+urlParamsString = '?keys=ko%C4%A3ener%C4%81cija';//location.search;
+urlParams = new URLSearchParams(urlParamsString);
+
+for (const [key, value] of urlParams) {
+    console.log(`${key}:${value}`);
+}
+
+for (const key of urlParams.keys()) {
+    console.log(key);
+}
+
+for (const value of urlParams.values()) {
+    console.log(value);
+}
+
+for (const entry of urlParams.entries()) {
+    console.log(entry);
+}
