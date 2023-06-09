@@ -10,7 +10,7 @@ const brickRowCount = 9;
 const brickColumnCount = 5;
 
 // Create ball props
-const square = {
+const ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
   size: 10,
@@ -53,7 +53,7 @@ for (let i = 0; i < brickRowCount; i++) {
 // Draw ball on canvas
 function drawBall() {
   ctx.beginPath();
-  ctx.arc(square.x, square.y, square.size, 0, Math.PI * 2);
+  ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
   ctx.fillStyle = '#0095dd';
   ctx.fill();
   ctx.closePath();
@@ -103,28 +103,28 @@ function movePaddle() {
 
 // Move ball on canvas
 function moveBall() {
-  square.x += square.dx;
-  square.y += square.dy;
+  ball.x += ball.dx;
+  ball.y += ball.dy;
 
   // Wall collision (right/left)
-  if (square.x + square.size > canvas.width || square.x - square.size < 0) {
-    square.dx *= -1; // ball.dx = ball.dx * -1
+  if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+    ball.dx *= -1; // ball.dx = ball.dx * -1
   }
 
   // Wall collision (top/bottom)
-  if (square.y + square.size > canvas.height || square.y - square.size < 0) {
-    square.dy *= -1;
+  if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+    ball.dy *= -1;
   }
 
   // console.log(ball.x, ball.y);
 
   // Paddle collision
   if (
-    square.x - square.size > paddle.x &&
-    square.x + square.size < paddle.x + paddle.w &&
-    square.y + square.size > paddle.y
+    ball.x - ball.size > paddle.x &&
+    ball.x + ball.size < paddle.x + paddle.w &&
+    ball.y + ball.size > paddle.y
   ) {
-    square.dy = -square.speed;
+    ball.dy = -ball.speed;
   }
 
   // Brick collision
@@ -132,12 +132,12 @@ function moveBall() {
     column.forEach(brick => {
       if (brick.visible) {
         if (
-          square.x - square.size > brick.x && // left brick side check
-          square.x + square.size < brick.x + brick.w && // right brick side check
-          square.y + square.size > brick.y && // top brick side check
-          square.y - square.size < brick.y + brick.h // bottom brick side check
+          ball.x - ball.size > brick.x && // left brick side check
+          ball.x + ball.size < brick.x + brick.w && // right brick side check
+          ball.y + ball.size > brick.y && // top brick side check
+          ball.y - ball.size < brick.y + brick.h // bottom brick side check
         ) {
-          square.dy *= -1;
+          ball.dy *= -1;
           brick.visible = false;
 
           increaseScore();
@@ -145,12 +145,6 @@ function moveBall() {
       }
     });
   });
-
-  // Hit bottom wall - Lose
-  if (square.y + square.size > canvas.height) {
-    showAllBricks();
-    score = 0;
-  }
 }
 
 // Increase score
