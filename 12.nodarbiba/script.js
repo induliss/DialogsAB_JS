@@ -3,6 +3,7 @@ const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const paused = document.getElementById("myDIV")
 
 let score = 0;
 
@@ -151,7 +152,8 @@ function moveSquare() {
     showAllBricks();
     score = 0;
   }*/
-}
+
+  }
 
 // Increase score
 function increaseScore() {
@@ -221,3 +223,4 @@ document.addEventListener('keyup', keyUp);
 // Rules and close event handlers
 rulesBtn.addEventListener('click', () => rules.classList.add('show'));
 closeBtn.addEventListener('click', () => rules.classList.remove('show'));
+
