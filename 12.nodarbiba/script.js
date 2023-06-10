@@ -10,7 +10,7 @@ const brickRowCount = 9;
 const brickColumnCount = 5;
 
 // Create ball props
-const ball = {
+const square = {
   x: canvas.width / 2,
   y: canvas.height / 2,
   size: 10,
@@ -51,9 +51,9 @@ for (let i = 0; i < brickRowCount; i++) {
 }
 
 // Draw ball on canvas
-function drawBall() {
+function drawSquare() {
   ctx.beginPath();
-  ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
+  ctx.arc(square.x, square.y, square.size, 0, Math.PI * 2);
   ctx.fillStyle = '#0095dd';
   ctx.fill();
   ctx.closePath();
@@ -102,29 +102,29 @@ function movePaddle() {
 }
 
 // Move ball on canvas
-function moveBall() {
-  ball.x += ball.dx;
-  ball.y += ball.dy;
+function moveSquare() {
+  square.x += square.dx;
+  square.y += square.dy;
 
   // Wall collision (right/left)
-  if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
-    ball.dx *= -1; // ball.dx = ball.dx * -1
+  if (square.x + square.size > canvas.width || square.x - square.size < 0) {
+    square.dx *= -1; // ball.dx = ball.dx * -1
   }
 
   // Wall collision (top/bottom)
-  if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
-    ball.dy *= -1;
+  if (square.y + square.size > canvas.height || square.y - square.size < 0) {
+    square.dy *= -1;
   }
 
   // console.log(ball.x, ball.y);
 
   // Paddle collision
   if (
-    ball.x - ball.size > paddle.x &&
-    ball.x + ball.size < paddle.x + paddle.w &&
-    ball.y + ball.size > paddle.y
+    square.x - square.size > paddle.x &&
+    square.x + square.size < paddle.x + paddle.w &&
+    square.y + square.size > paddle.y
   ) {
-    ball.dy = -ball.speed;
+    square.dy = -square.speed;
   }
 
   // Brick collision
@@ -132,12 +132,12 @@ function moveBall() {
     column.forEach(brick => {
       if (brick.visible) {
         if (
-          ball.x - ball.size > brick.x && // left brick side check
-          ball.x + ball.size < brick.x + brick.w && // right brick side check
-          ball.y + ball.size > brick.y && // top brick side check
-          ball.y - ball.size < brick.y + brick.h // bottom brick side check
+          square.x - square.size > brick.x && // left brick side check
+          square.x + square.size < brick.x + brick.w && // right brick side check
+          square.y + square.size > brick.y && // top brick side check
+          square.y - square.size < brick.y + brick.h // bottom brick side check
         ) {
-          ball.dy *= -1;
+          square.dy *= -1;
           brick.visible = false;
 
           increaseScore();
@@ -174,7 +174,7 @@ function draw() {
   // clear canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  drawBall();
+  drawSquare();
   drawPaddle();
   drawScore();
   drawBricks();
@@ -183,7 +183,7 @@ function draw() {
 // Update canvas drawing and animation
 function update() {
   movePaddle();
-  moveBall();
+  moveSquare();
 
   // Draw everything
   draw();
