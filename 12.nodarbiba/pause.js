@@ -1,7 +1,7 @@
 function myPlayFunction() {
-    document.getElementById("myDIV").style.animationPlayState = "running";
+    document.getElementById("myDIV").requestAnimationFrame(update) = "running";
   }
  
  function myPauseFunction() {
-    document.getElementById("myDIV").style.animationPlayState = "paused";
+    document.getElementById("myDIV").requestAnimationFrame(update) = "paused";
   }
